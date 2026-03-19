@@ -11,8 +11,10 @@ int main() {
   float area_km2, area_km22, PIB, PIB2;
  
   
-  // tirei o \n pois acho visualmente mais bonito para o usuário preencher as informações.
-    printf("Digite o nome da cidade: ");
+  //entrada de dados para usuário 
+  //armazenamento de daodos nas variáveis
+  // tirei a quebra de linha na entrada dos dados, \n pois  é mais bonito visualmente  para o usuário preencher as informações.
+    printf("Digite o nome da cidade: "); 
     scanf(" %s", cidade);
     printf("Digite o nome da segunda cidade: ");
     scanf(" %s", cidade2);
@@ -47,14 +49,16 @@ int main() {
     printf("Digite o PIB da segunda cidade:");
     scanf(" %f", &PIB2);
 
+  //saída de dados para usuário, cidade, estado etc...
+ 
      printf ("Carta 1: \n"
             "Estado: %c\n"
             "Código: %2s\n"
             "Nome da Cidade: %s\n"
             "População: %d\n"
             "Área: %f km2\n"
-            "PIB: %f bilhões de reais\n :"
-            "Número de Pontos Turísticos: %d",
+            "PIB: %f bilhões de reais\n "
+            "Número de Pontos Turísticos:%d\n",
             estado,
             codigo_carta,
             cidade,
@@ -66,7 +70,7 @@ int main() {
       );
 
     printf("\n");
-    printf("\n");
+    
 
     printf ("Carta 2: \n"
             "Estado: %c\n"
@@ -74,8 +78,8 @@ int main() {
             "Nome da Cidade: %s\n"
             "População: %d\n"
             "Área: %f km2\n"
-            "PIB: %f bilhões de reais\n :"
-            "Número de Pontos Turísticos: %d",
+            "PIB: %f bilhões de reais\n "
+            "Número de Pontos Turísticos:%d\n",
             estado2,
             codigo_carta2,
             cidade2,
@@ -87,9 +91,8 @@ int main() {
     );
 return 0;
 
-  // Área para entrada de dados
 
-  // Área para exibição dos dados da cidade
+ 
 
 
 } 
