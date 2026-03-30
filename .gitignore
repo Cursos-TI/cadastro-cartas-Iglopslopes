@@ -1,3 +1,11 @@
+# executáveis
 estoque
 *.out
 *.exe
+
+# arquivos temporários do editor
+.vscode/*
+!.vscode/settings.json
+
+# arquivos temporários gerais
+*.tmp
