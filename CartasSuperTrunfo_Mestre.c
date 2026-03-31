@@ -8,7 +8,7 @@ int main() {
 
   // Área para definição das variáveis para armazenar as propriedades das cidades
   char estado ,estado2, codigo_carta[4],codigo_carta2[4], cidade[50], cidade2[50];
-  int n_pontos_turisticos,n_pontos_turisticos2;
+  int n_pontos_turisticos,n_pontos_turisticos2, opcao;
   unsigned long int populacao,populacao2;
   float area_km2, area_km2_2, PIB, PIB2, Dens_Populacional, Dens_Populacional2, PIBperCapita, PIBperCapita2, inverso_densidade, inverso_densidade2,SUPERPODER_A, SUPERPODER_B;
   int resultado_Populacao, resultado_area, resultado_PIB, resultado_Pontos_turisticos, resultado_densidade, resultado_PIB2,resultado_PIBperCapita,resultado_SUPERPODER;
@@ -67,9 +67,22 @@ int main() {
 
     printf("Insira o número de pontos turísticos da cidade: ");
     scanf("%d", &n_pontos_turisticos2);
+     
+    printf("\n");
+    printf("\n");
 
-    
-  // Cálculo para a densidade populacional
+    printf(" *** MENU PRINCIPAL ESCOLHA UMA OPÇÃO PARA COMPARAÇÃO! *** \n");
+    printf("\n");
+    printf("1. Nome do País: \n");
+    printf("2. População: \n");
+    printf("3. Área: \n");
+    printf("4. PIB: \n");
+    printf("5. Nùmero de pontos turísticos: \n");
+    printf("6. Densidade demográfica: \n");
+    scanf("%d", &opcao);
+
+
+   // Cálculo para a densidade populacional
   
     Dens_Populacional =  populacao / area_km2;
     Dens_Populacional2 =  populacao2 / area_km2_2;
@@ -79,9 +92,76 @@ int main() {
     PIBperCapita =  PIB /    populacao; 
     PIBperCapita2 =  PIB2 /  populacao2;
 
+  // Criando o Menu de escolhas e testando opções escolhidas.
+
+    switch (opcao)
+    {
+    case 1:
+      printf("Cidades para comparação ( %s ), ( %s ) \n:", cidade, cidade2 );
+      break;
+
+    case 2:
+          if(populacao > populacao2)
+      {
+        printf("Populacao Carta 1 venceu. Atributo utilizado POPULAÇÂO: CARTA1 ( %lu ), POPULAÇÂO CARTA2 ( %lu ),  habitantes \n", populacao,populacao2);
+      }else if(populacao < populacao2){
+        printf("Populacao Carta 2 venceu. Atributo utilizado POPULAÇÂO: CARTA1 ( %lu ), POPULAÇÂO CARTA2 ( %lu ),  habitantes \n", populacao, populacao2);
+      }else{
+        printf("DEU EMPATE! \n");
+      }
+      break;
+
+    case 3:
+      if(area_km2 > area_km2_2){
+        printf("Área km2 da carta 1 venceu. Atributo utilizado: Área Carta1 ( %f ),  Área Carta2 ( %f )km2\n" , area_km2, area_km2_2);
+      }else if(area_km2 < area_km2_2){
+        printf("Área km2 da carta 2 venceu. Atributo utilizado: Área Carta1 ( %f ),  Área Carta2 ( %f ) km2\n", area_km2, area_km2_2);
+      }else{
+        printf("DEU EMPATE! \n");
+      }   
+      break;
+
+    case 4:
+      if(PIB > PIB2){
+        printf("O PIB da  carta 1 venceu. Atributo utilizado PIB: Carta1 ( %f ), PIB Carta2 ( %f ) \n", PIB, PIB2);
+      }else if(PIB < PIB2){
+        printf("O PIB da  carta 2 venceu. Atributo utilizado PIB: Carta1 ( %f ), PIB Carta2 ( %f )\n", PIB, PIB2);
+      }else
+        printf("DEU EMPATE! \n");      
+      break;
+
+    case 5:
+      if(n_pontos_turisticos > n_pontos_turisticos2){
+        printf("A cidade da carta 1 venceu. Tem mais pontos turísticos do que a carta 2:  Carta1 ( %d ) , Carta 2 ( %d ) \n", n_pontos_turisticos, n_pontos_turisticos2);
+      }else if(n_pontos_turisticos < n_pontos_turisticos2){ 
+        printf("A cidade da carta 2 venceu. Tem mais pontos turísticos do que a carta 1:  Carta1 ( %d ), Carta2 ( %d )\n", n_pontos_turisticos, n_pontos_turisticos2);
+      }else{
+        printf("DEU EMPATE! \n");  
+      }  
+      break;
+
+    case 6:
+      if(Dens_Populacional < Dens_Populacional2){
+        printf("A cidade da carta 1 venceu. Carta1 %f, Carta2 %f \n", Dens_Populacional, Dens_Populacional2);
+      }else if(Dens_Populacional > Dens_Populacional2){
+        printf("A cidade da carta 2 venceu. Carta1 %f, Carta2 %f \n", Dens_Populacional, Dens_Populacional2);
+      }else{
+        printf("DEU EMPATE! \n"); 
+      }
+      break; 
+
+
+    default:
+        printf("Opção Inválida! \n");
+      break;
+    }
+
+    
+  
+
   //saída de dados para usuário, cidade, estado etc...
  
-     printf("Carta 1: \n"
+    /* printf("Carta 1: \n"
             "Estado: %c\n"
             "Código: %s\n"
             "Nome da Cidade: %s\n"
@@ -97,7 +177,7 @@ int main() {
             PIB,
             n_pontos_turisticos
            
-          );         
+          );       
      
     printf("Densidade Populacional: %.2f hab/km2 \n"
             "PIB per Capita: %.2f, reais \n" ,
@@ -171,7 +251,7 @@ int main() {
     SUPERPODER_A =  populacao + area_km2 + PIB + n_pontos_turisticos + PIBperCapita + inverso_densidade;  
     SUPERPODER_B =  populacao + area_km2_2 + PIB2 + n_pontos_turisticos2 + PIBperCapita2 + inverso_densidade2;       
 
-   
+   */
 
 return 0;
 
