@@ -45,7 +45,11 @@ int main() {
 
     // --- MENU DINÂMICO 1 ---
     printf("\n--- ESCOLHA O PRIMEIRO ATRIBUTO ---\n");
-    printf("1. População\n2. Área\n3. PIB\n4. Pontos Turísticos\n5. Densidade Demográfica\n");
+    printf("1. População\n");
+    printf("2. Àrea\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos \n");
+    printf("5. Densidade Demográfica \n");
     printf("Escolha: ");
     scanf("%d", &opcao1);
 
@@ -93,19 +97,19 @@ int main() {
     // Atribuição do segundo valor
     switch(opcao2) {
         case 1: valor2_carta1 = populacao1; 
-        valor2_carta2 = populacao2; 
+                valor2_carta2 = populacao2; 
         break;
         case 2: valor2_carta1 = area1; 
-        valor2_carta2 = area2; 
+                valor2_carta2 = area2; 
         break;
         case 3: valor2_carta1 = pib1;
-         valor2_carta2 = pib2; 
+                valor2_carta2 = pib2; 
         break;
         case 4: valor2_carta1 = pontos1; 
-        valor2_carta2 = pontos2; 
+                valor2_carta2 = pontos2; 
         break;
         case 5: valor2_carta1 = densidade1; 
-        valor2_carta2 = densidade2; 
+                valor2_carta2 = densidade2; 
         break;
         default: printf("Opção inválida!"); return 0;
     }
